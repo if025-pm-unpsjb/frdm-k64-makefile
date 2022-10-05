@@ -73,7 +73,7 @@ clean:
 
 .c.o:
 	+@echo "Compile: $<"
-	$(CC) $(CC_FLAGS) $(CC_SYMBOLS) -std=gnu99 $(INCLUDE_PATHS) -o $@ $<
+	@$(CC) $(CC_FLAGS) $(CC_SYMBOLS) -std=gnu99 $(INCLUDE_PATHS) -o $@ $<
 
 $(PROJECT).a: $(OBJECTS) $(SYS_OBJECTS)
 	+@echo "Linking: $@"
